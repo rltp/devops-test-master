@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample-api-pod
+  namespace: devops-test-master
+  labels:
+    app: api
+spec:
+  containers:
+  - name: sample-api
+    image: rltp/sample-api
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 80
+      name: sample-api-svc
+
+    
